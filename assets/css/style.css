@@ -1,0 +1,14 @@
+/*Styling the balloon*/
+#balloon {
+    position: absolute;
+    height: 160px;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    /* Vendor prefix for Webkit browsers */
+    -moz-transition: all 0.25s;
+    /* Vendor prefix for Mozilla Firefox */
+    -ms-transition: all 0.25s;
+    /* Vendor prefix for Microsoft Internet Explorer */
+    -o-transition: all 0.25s;
+    /* Vendor prefix for Opera */
+}
