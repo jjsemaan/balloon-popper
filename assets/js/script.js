@@ -7,6 +7,19 @@ For this game css and js are separated into styles.css and script.js files
 Improvised code will be prefixed 'Improvised' in a comment 
 */
 
+
+//Start game function
+function startGame() {
+    var nickname = document.getElementById("nickname").value;
+    var level = document.getElementById("level").value;
+    console.log("Nickname: " + nickname);
+    console.log("Level: " + level);
+
+    var instructionsDiv = document.querySelector('.instructions');
+    instructionsDiv.classList.add('hidden');
+}
+
+
 // Select the balloon elements and the score box element from the DOM
 const redBalloon = document.getElementById('red-balloon');
 const blueBalloon = document.getElementById('blue-balloon');

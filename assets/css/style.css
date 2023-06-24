@@ -19,3 +19,39 @@
     font-family: 'Carter One', cursive;
     font-size: 400;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form input[type="text"],
+.form select {
+    margin-right: 10px;
+}
+
+.instructions {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+/*.form button {
+    margin-top: 10px;
+}*/
