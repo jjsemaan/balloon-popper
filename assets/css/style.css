@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
 /*Styling the balloon*/
-#balloon {
+#blue-balloon, #red-balloon, #yellow-balloon, #green-balloon {
     position: absolute;
     height: 160px;
     transition: all 0.25s;
