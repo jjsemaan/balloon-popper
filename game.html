@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Balloon Popper Game</title>
+</head>
+
+<body id="game-html">
+    <div class="container">
+        <div class="form-container">
+            <form class="form" id="game-form" action="game.html">
+                <input type="text" id="nickname" placeholder="Enter Your Nickname" required>
+                <label for="level">Difficulty Level:</label>
+                <select id="level" name="level">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button type="submit" id="start-button">Start Game</button>
+            </form>
+        </div>
+        
+            <h1>Welcome to "Balloon Popper"!</h1>
+            <p>
+                Hi <span id="nickname-display"></span>
+            </p>
+        
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

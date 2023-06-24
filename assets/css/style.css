@@ -39,6 +39,15 @@ body {
     background-repeat: no-repeat;
 }
 
+body[id="game-html"] {
+    display: flex;
+    align-items: flex-start;
+    background-image: url('../images/balloon-arch-opacity.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -96,6 +105,3 @@ button[type="submit"]:hover {
 .hidden {
     display: none;
 }
-/*.form button {
-    margin-top: 10px;
-}*/
