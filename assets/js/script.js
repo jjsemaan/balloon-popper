@@ -17,6 +17,12 @@ function startGame() {
 
     var instructionsDiv = document.querySelector('.instructions');
     instructionsDiv.classList.add('hidden');
+
+    var formDiv = document.querySelector('.form');
+    formDiv.style.marginBottom = '0'; /* Remove the margin at the bottom */
+
+    var containerDiv = document.querySelector('.container');
+    containerDiv.insertBefore(formDiv, instructionsDiv); /* Move the form div to the top */
 }
 
 

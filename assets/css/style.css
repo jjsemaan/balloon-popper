@@ -15,6 +15,12 @@
     /* Vendor prefix for Opera */
 }
 
+h1 {
+    font-family: 'Carter One', cursive;
+    font-size: 400;
+    text-align: center;
+}
+
 #score-box {
     font-family: 'Carter One', cursive;
     font-size: 400;
@@ -26,6 +32,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
+    margin: 0 150px;
 }
 
 .container {
