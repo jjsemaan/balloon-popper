@@ -45,15 +45,45 @@ body {
     align-items: center;
 }
 
+.form-container {
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 5px;
+}
+
 .form {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.form input[type="text"],
-.form select {
+label {
     margin-right: 10px;
+}
+
+input[type="text"],
+select {
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    height: 30px;
+    /* Adjust the height as needed */
+}
+
+button[type="submit"] {
+    padding: 8px 15px;
+    background-color: #16d71c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 30px;
+    /* Adjust the height to match the label */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
 }
 
 .instructions {

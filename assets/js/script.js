@@ -8,7 +8,7 @@ Improvised code will be prefixed 'Improvised' in a comment
 */
 
 
-//Start game function
+// Start game function
 function startGame() {
     var nickname = document.getElementById("nickname").value;
     var level = document.getElementById("level").value;
@@ -22,8 +22,16 @@ function startGame() {
     formDiv.style.marginBottom = '0'; /* Remove the margin at the bottom */
 
     var containerDiv = document.querySelector('.container');
+    containerDiv.style.backgroundImage = 'url("balloon-arch-opacity.png")'; /* Change the background image */
+
     containerDiv.insertBefore(formDiv, instructionsDiv); /* Move the form div to the top */
 }
+
+// Select the start game button element from the DOM
+const startButton = document.getElementById('start-button');
+
+// Add click event to the start game button
+startButton.addEventListener('click', startGame);
 
 
 // Select the balloon elements and the score box element from the DOM
