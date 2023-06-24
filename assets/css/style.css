@@ -32,7 +32,11 @@ body {
     align-items: flex-start;
     height: 100vh;
     font-family: Arial, sans-serif;
-    margin: 0 150px;
+    margin-top: 0;
+    background-image: url('../images/balloon-arch.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -54,7 +58,10 @@ body {
 
 .instructions {
     display: block;
+    margin: 20% 25% 0 25%;
+    text-align: center;
 }
+
 
 .hidden {
     display: none;
