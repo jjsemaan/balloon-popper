@@ -35,4 +35,18 @@ document.getElementById('game-form').addEventListener('submit', function (event)
     window.location.href = htmlFile;
 });
 
+// Select the start game button element from the DOM
+const startButton = document.getElementById('start-button');
+
+// Add click event to the start game button
+startButton.addEventListener('click', startGame);
+
+// Select the balloon elements and the score box element from the DOM
+const redBalloon = document.getElementById('red-balloon');
+const blueBalloon = document.getElementById('blue-balloon');
+const yellowBalloon = document.getElementById('yellow-balloon');
+const greenBalloon = document.getElementById('green-balloon');
+const scoreBox = document.getElementById('score-box');
+
+
 
