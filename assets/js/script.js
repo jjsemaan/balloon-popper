@@ -35,42 +35,51 @@ document.getElementById('game-form').addEventListener('submit', function (event)
     window.location.href = htmlFile;
 });
 
-//Target each html page separately
+
+// Action when the balloon is clicked
+let score = 0;
+let count = 0;
+
+// Retrieve score-label element
+let scoreLabel = document.getElementById('score-label');
+
+//display the initial score as 0
+scoreLabel.textContent = 'Score: ' + score; 
+
+    
+// Select the start game button element from the DOM
+const startButton = document.getElementById('start-button');
+
+// Add click event to the start game button
+startButton.addEventListener('click', startGame);
+
+// Select the balloon elements and the score box element from the DOM
+const redBalloon = document.getElementById('red-balloon');
+const blueBalloon = document.getElementById('blue-balloon');
+const yellowBalloon = document.getElementById('yellow-balloon');
+const greenBalloon = document.getElementById('green-balloon');
+const scoreBox = document.getElementById('score-box');
+
+// Click events of the balloons
+redBalloon.addEventListener('click', poppedBalloon);
+blueBalloon.addEventListener('click', poppedBalloon);
+yellowBalloon.addEventListener('click', poppedBalloon);
+greenBalloon.addEventListener('click', poppedBalloon);
+    
+
+
+    
+
+/*
+    //Target each html page separately
 if (window.location.pathname === '/easy.html') {
     // Code specific to easy.html
-    // Select the start game button element from the DOM
-    const startButton = document.getElementById('start-button');
-    
-    // Add click event to the start game button
-    startButton.addEventListener('click', startGame);
-
-    // Select the balloon elements and the score box element from the DOM
-    const redBalloon = document.getElementById('red-balloon');
-    const blueBalloon = document.getElementById('blue-balloon');
-    const yellowBalloon = document.getElementById('yellow-balloon');
-    const greenBalloon = document.getElementById('green-balloon');
-    const scoreBox = document.getElementById('score-box');
-
-    // Click events of the balloons
-    redBalloon.addEventListener('click', poppedBalloon);
-    blueBalloon.addEventListener('click', poppedBalloon);
-    yellowBalloon.addEventListener('click', poppedBalloon);
-    greenBalloon.addEventListener('click', poppedBalloon);
-
-
-    // Action when the balloon is clicked
-    let score = 0;
-    let count = 0;
-
-    // Retrieve score-label element
-    let scoreLabel = document.getElementById('score-label')
-
-
 } else if (window.location.pathname === '/medium.html') {
     // Code specific to medium.html
 } else if (window.location.pathname === '/hard.html') {
     // Code specific to hard.html
 }
+*/
 
 
 
