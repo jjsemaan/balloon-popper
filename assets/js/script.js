@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (nickname) {
         // Display the nickname on the page
         var nicknameElement = document.getElementById('nickname-display');
-        nicknameElement.textContent = 'Player Nickname: ' + nickname + '!';
+        nicknameElement.textContent = 'Player Nickname: ' + nickname + ' !';
     }
 });
 
@@ -74,10 +74,16 @@ function moveBalloon() {
     yellowBalloon.style.height = '200px';
     greenBalloon.style.height = '200px';
 
-    redBalloon.style.left = Math.random() * 800 + 'px';
-    blueBalloon.style.left = Math.random() * 800 + 'px';
-    yellowBalloon.style.left = Math.random() * 800 + 'px';
-    greenBalloon.style.left = Math.random() * 800 + 'px';
+    // Get the screen width
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Set the maximum left position based on the screen width
+    var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
+
+    redBalloon.style.left = Math.random() * maxLeft + 'px';
+    blueBalloon.style.left = Math.random() * maxLeft + 'px';
+    yellowBalloon.style.left = Math.random() * maxLeft + 'px';
+    greenBalloon.style.left = Math.random() * maxLeft + 'px';
 
     redBalloon.style.top = Math.random() * 600 + 'px';
     blueBalloon.style.top = Math.random() * 600 + 'px';

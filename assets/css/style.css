@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
 /*Styling the balloon*/
-#blue-balloon, #red-balloon, #yellow-balloon, #green-balloon {
+/* Styling the balloon */
+#blue-balloon,
+#red-balloon,
+#yellow-balloon,
+#green-balloon {
     position: absolute;
-    height: 160px;
+    max-width: 100%;
+    height: auto;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
     /* Vendor prefix for Webkit browsers */
@@ -47,6 +52,8 @@ body {
 body[id="game-html"] {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     background-image: url('../images/balloon-arch-opacity.png');
     background-size: cover;
     background-position: center;
