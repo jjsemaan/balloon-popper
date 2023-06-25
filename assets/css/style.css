@@ -26,6 +26,11 @@ h1 {
     font-size: 400;
 }
 
+#score-label {
+    font-family: 'Carter One', cursive;
+    font-size: 400;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -64,6 +69,14 @@ body[id="game-html"] {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.form-levels {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Carter One', cursive;
+    font-size: 400;
 }
 
 label {
