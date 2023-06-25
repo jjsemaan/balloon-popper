@@ -7,8 +7,6 @@
 #yellow-balloon,
 #green-balloon {
     position: absolute;
-    max-width: 100%;
-    height: auto;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
     /* Vendor prefix for Webkit browsers */
@@ -18,6 +16,7 @@
     /* Vendor prefix for Microsoft Internet Explorer */
     -o-transition: all 0.25s;
     /* Vendor prefix for Opera */
+    visibility: hidden;
 }
 
 h1 {
@@ -36,7 +35,7 @@ h1 {
     font-size: 400;
 }
 
-body {
+#body-index {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -49,9 +48,10 @@ body {
     background-repeat: no-repeat;
 }
 
-body[id="game-html"] {
+#body-game {
     display: flex;
     align-items: flex-start;
+    height: 90vh;
     flex-direction: column;
     align-items: center;
     background-image: url('../images/balloon-arch-opacity.png');
@@ -66,10 +66,20 @@ body[id="game-html"] {
     align-items: center;
 }
 
+.container-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .form-container {
     background-color: lightgrey;
     padding: 20px;
     border-radius: 5px;
+    
 }
 
 .form {
@@ -79,9 +89,6 @@ body[id="game-html"] {
 }
 
 .form-levels {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     font-family: 'Carter One', cursive;
     font-size: 400;
 }
