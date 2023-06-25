@@ -10,22 +10,18 @@
 </head>
 
 <body id="game-html">
+    <img id="red-balloon" src="assets/images/balloon-red.png" alt="red balloon">
+    <img id="blue-balloon" src="assets/images/balloon-blue.png" alt="blue balloon">
+    <img id="yellow-balloon" src="assets/images/balloon-yellow.png" alt="yellow balloon">
+    <img id="green-balloon" src="assets/images/balloon-green.png" alt="green-balloon balloon">
     <div class="container">
         <div class="form-container">
             <form class="form" id="game-form" action="game.html">
-                <input type="text" id="nickname" placeholder="Enter Your Nickname" required>
-                <label for="level">Difficulty Level:</label>
-                <select id="level" name="level">
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-                <button type="submit" id="start-button">Start Game</button>
+                <label id="score-box"><span id="nickname-display"></span></label>
+                <label id="score-box">Difficulty Level: Easy</label>
+                <label id="score-box">Score: </label>
             </form>
         </div>
-            <p>
-                Hi <span id="nickname-display"></span>
-            </p>
         
     </div>
     <script src="assets/js/script.js"></script>
