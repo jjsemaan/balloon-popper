@@ -58,9 +58,16 @@ function moveBalloon() {
     // Set the maximum left position based on the screen width
     var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
 
+    // Loop through four iterations
     for (let i = 0; i < 4; i++) {
+        // Get the balloon element based on the current iteration index
+        // The balloon elements are stored in an array: [redBalloon, blueBalloon, yellowBalloon, greenBalloon]
         const balloon = [redBalloon, blueBalloon, yellowBalloon, greenBalloon][i];
+
+        // Set the left position of the balloon element to a random value within the maximum left boundary
         balloon.style.left = Math.random() * maxLeft + 'px';
+
+        // Set the top position of the balloon element to a random value within 0 to 500 pixels from the top
         balloon.style.top = Math.random() * 500 + 'px';
     }
 

@@ -1,4 +1,4 @@
-// Execute the following code when the DOM is fully loaded
+// Execute the when the DOM loads
 document.addEventListener('DOMContentLoaded', function () {
     // Retrieve the nickname from localStorage
     var nickname = localStorage.getItem('nickname');
