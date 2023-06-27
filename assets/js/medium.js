@@ -28,7 +28,6 @@ redHeartBalloon.addEventListener('click', poppedBalloon);
 pinkBalloon.addEventListener('click', poppedBalloon);
 
 
-
 function poppedBalloon() {
     // Check if `this` is equal to `redBalloon`
     if (this === redBalloon) {
@@ -49,18 +48,11 @@ function poppedBalloon() {
     redBalloon.style.height = '1px';
     redHeartBalloon.style.height = '1px';
     pinkBalloon.style.height = '1px';
+    
 }
 
 function moveBalloon() {
-    // Show the balloons
-    redBalloon.style.visibility = 'visible';
-    blueBalloon.style.visibility = 'visible';
-    yellowBalloon.style.visibility = 'visible';
-    greenBalloon.style.visibility = 'visible';
-    redHeartBalloon.style.visibility = 'visible';
-    pinkBalloon.style.visibility = 'visible';
-
-
+    
     // Get the screen width
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
@@ -75,10 +67,18 @@ function moveBalloon() {
     redHeartBalloon.style.height = balloonSize * 1.5 + 'px';
     pinkBalloon.style.height = balloonSize + 'px';
 
+    // Show the balloons
+    redBalloon.style.visibility = 'visible';
+    blueBalloon.style.visibility = 'visible';
+    yellowBalloon.style.visibility = 'visible';
+    greenBalloon.style.visibility = 'visible';
+    redHeartBalloon.style.visibility = 'visible';
+    pinkBalloon.style.visibility = 'visible';
+
     // Set the maximum left position based on the screen width
     var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
 
-    // Loop through five iterations
+    // Loop through six iterations
     for (let i = 0; i < 6; i++) {
         // Get the balloon element based on the current iteration index
         // The balloon elements are stored in an array: [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon, pinkBalloon]
@@ -90,7 +90,6 @@ function moveBalloon() {
         // Set the top position of the balloon element to a random value within 0 to 600 pixels from the top
         balloon.style.top = Math.random() * 600 + 'px';
     }
-
 
     count++; // Increment the count of balloon movements
 
@@ -107,4 +106,5 @@ function moveBalloon() {
         return; // Terminate the code execution after displaying the alert
     }
 }
+
 let timer = setInterval(moveBalloon, 800);
