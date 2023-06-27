@@ -15,6 +15,7 @@ const redBalloon = document.getElementById('red-balloon');
 const blueBalloon = document.getElementById('blue-balloon');
 const yellowBalloon = document.getElementById('yellow-balloon');
 const greenBalloon = document.getElementById('green-balloon');
+const greenBalloon = document.getElementById('red-heart-balloon');
 const scoreBox = document.getElementById('score-box');
 
 // Click events of the balloons

@@ -5,7 +5,10 @@
 #blue-balloon,
 #red-balloon,
 #yellow-balloon,
-#green-balloon {
+#green-balloon,
+#red-heart-balloon,
+#purple-balloon,
+#pink-balloon {
     position: absolute;
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
