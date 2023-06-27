@@ -16,6 +16,7 @@ const blueBalloon = document.getElementById('blue-balloon');
 const yellowBalloon = document.getElementById('yellow-balloon');
 const greenBalloon = document.getElementById('green-balloon');
 const redHeartBalloon = document.getElementById('red-heart-balloon');
+const pinkBalloon = document.getElementById('pink-balloon');
 const scoreBox = document.getElementById('score-box');
 
 // Click events of the balloons
@@ -24,21 +25,30 @@ blueBalloon.addEventListener('click', poppedBalloon);
 yellowBalloon.addEventListener('click', poppedBalloon);
 greenBalloon.addEventListener('click', poppedBalloon);
 redHeartBalloon.addEventListener('click', poppedBalloon);
+pinkBalloon.addEventListener('click', poppedBalloon);
 
 
 
 function poppedBalloon() {
+    // Check if `this` is equal to `redBalloon`
     if (this === redBalloon) {
-        score--;
+        score--; // Decrement score by 1
+    } else if (this === redHeartBalloon) {
+        score += 2; // Increment score by 2 if `this` is equal to `redHeartBalloon`
     } else {
-        score++;
+        score++; // Increment score by 1 for other balloons
     }
+
+    // Update the score label with the new score
     scoreLabel.innerHTML = 'Score: ' + score;
+
+    // Set the height of all balloons to 1px
     blueBalloon.style.height = '1px';
     greenBalloon.style.height = '1px';
     yellowBalloon.style.height = '1px';
     redBalloon.style.height = '1px';
     redHeartBalloon.style.height = '1px';
+    pinkBalloon.style.height = '1px';
 }
 
 function moveBalloon() {
@@ -48,6 +58,7 @@ function moveBalloon() {
     yellowBalloon.style.visibility = 'visible';
     greenBalloon.style.visibility = 'visible';
     redHeartBalloon.style.visibility = 'visible';
+    pinkBalloon.style.visibility = 'visible';
 
 
     // Get the screen width
@@ -61,22 +72,23 @@ function moveBalloon() {
     blueBalloon.style.height = balloonSize + 'px';
     yellowBalloon.style.height = balloonSize + 'px';
     greenBalloon.style.height = balloonSize + 'px';
-    redHeartBalloon.style.height = balloonSize + 'px';
+    redHeartBalloon.style.height = balloonSize * 1.5 + 'px';
+    pinkBalloon.style.height = balloonSize + 'px';
 
     // Set the maximum left position based on the screen width
     var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
 
     // Loop through five iterations
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         // Get the balloon element based on the current iteration index
-        // The balloon elements are stored in an array: [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon]
-        const balloon = [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon][i];
+        // The balloon elements are stored in an array: [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon, pinkBalloon]
+        const balloon = [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon, pinkBalloon][i];
 
         // Set the left position of the balloon element to a random value within the maximum left boundary
         balloon.style.left = Math.random() * maxLeft + 'px';
 
-        // Set the top position of the balloon element to a random value within 0 to 500 pixels from the top
-        balloon.style.top = Math.random() * 500 + 'px';
+        // Set the top position of the balloon element to a random value within 0 to 400 pixels from the top
+        balloon.style.top = Math.random() * 400 + 'px';
     }
 
 
@@ -90,8 +102,9 @@ function moveBalloon() {
         yellowBalloon.style.visibility = 'hidden';
         greenBalloon.style.visibility = 'hidden';
         redHeartBalloon.style.visibility = 'hidden';
+        pinkBalloon.style.visibility = 'hidden';
 
         return; // Terminate the code execution after displaying the alert
     }
 }
-let timer = setInterval(moveBalloon, 600);
+let timer = setInterval(moveBalloon, 800);

@@ -46,14 +46,17 @@ function moveBalloon() {
     yellowBalloon.style.visibility = 'visible';
     greenBalloon.style.visibility = 'visible';
 
-    // Reset the balloon sizes and positions
-    redBalloon.style.height = '30%';
-    blueBalloon.style.height = '30%';
-    yellowBalloon.style.height = '30%';
-    greenBalloon.style.height = '30%';
-
     // Get the screen width
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Calculate the balloon size based on the screen width
+    var balloonSize = Math.min(screenWidth * 0.3, 200); // Set the maximum size to 200px or 30% of the screen width, whichever is smaller
+
+    // Reset the balloon sizes and positions
+    redBalloon.style.height = balloonSize + 'px';
+    blueBalloon.style.height = balloonSize + 'px';
+    yellowBalloon.style.height = balloonSize + 'px';
+    greenBalloon.style.height = balloonSize + 'px';
 
     // Set the maximum left position based on the screen width
     var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
@@ -67,8 +70,8 @@ function moveBalloon() {
         // Set the left position of the balloon element to a random value within the maximum left boundary
         balloon.style.left = Math.random() * maxLeft + 'px';
 
-        // Set the top position of the balloon element to a random value within 0 to 500 pixels from the top
-        balloon.style.top = Math.random() * 500 + 'px';
+        // Set the top position of the balloon element to a random value within 0 to 400 pixels from the top
+        balloon.style.top = Math.random() * 400 + 'px';
     }
 
     count++; // Increment the count of balloon movements
@@ -85,10 +88,3 @@ function moveBalloon() {
     }
 }
 let timer = setInterval(moveBalloon, 1200);
-
-
-
-// Select the start game button element from the DOM
-//const startButton = document.getElementById('start-button');
-// Add click event to the start game button
-//startButton.addEventListener('click', startGame);
