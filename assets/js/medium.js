@@ -15,7 +15,7 @@ const redBalloon = document.getElementById('red-balloon');
 const blueBalloon = document.getElementById('blue-balloon');
 const yellowBalloon = document.getElementById('yellow-balloon');
 const greenBalloon = document.getElementById('green-balloon');
-const greenBalloon = document.getElementById('red-heart-balloon');
+const redHeartBalloon = document.getElementById('red-heart-balloon');
 const scoreBox = document.getElementById('score-box');
 
 // Click events of the balloons
@@ -23,6 +23,7 @@ redBalloon.addEventListener('click', poppedBalloon);
 blueBalloon.addEventListener('click', poppedBalloon);
 yellowBalloon.addEventListener('click', poppedBalloon);
 greenBalloon.addEventListener('click', poppedBalloon);
+redHeartBalloon.addEventListener('click', poppedBalloon);
 
 
 
@@ -37,6 +38,7 @@ function poppedBalloon() {
     greenBalloon.style.height = '1px';
     yellowBalloon.style.height = '1px';
     redBalloon.style.height = '1px';
+    redHeartBalloon.style.height = '1px';
 }
 
 function moveBalloon() {
@@ -45,12 +47,14 @@ function moveBalloon() {
     blueBalloon.style.visibility = 'visible';
     yellowBalloon.style.visibility = 'visible';
     greenBalloon.style.visibility = 'visible';
+    redHeartBalloon.style.visibility = 'visible';
 
     // Reset the balloon sizes and positions
     redBalloon.style.height = '30%';
     blueBalloon.style.height = '30%';
     yellowBalloon.style.height = '30%';
     greenBalloon.style.height = '30%';
+    redHeartBalloon.style.height = '30%';
 
     // Get the screen width
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -59,10 +63,10 @@ function moveBalloon() {
     var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
 
     // Loop through four iterations
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
         // Get the balloon element based on the current iteration index
-        // The balloon elements are stored in an array: [redBalloon, blueBalloon, yellowBalloon, greenBalloon]
-        const balloon = [redBalloon, blueBalloon, yellowBalloon, greenBalloon][i];
+        // The balloon elements are stored in an array: [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon]
+        const balloon = [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon][i];
 
         // Set the left position of the balloon element to a random value within the maximum left boundary
         balloon.style.left = Math.random() * maxLeft + 'px';
@@ -81,6 +85,7 @@ function moveBalloon() {
         blueBalloon.style.visibility = 'hidden';
         yellowBalloon.style.visibility = 'hidden';
         greenBalloon.style.visibility = 'hidden';
+        redHeartBalloon.style.visibility = 'hidden';
 
         return; // Terminate the code execution after displaying the alert
     }
