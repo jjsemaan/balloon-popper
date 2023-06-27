@@ -89,26 +89,42 @@ function moveBalloon() {
     // Set the maximum left position based on the screen width
     //var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
 
-    // Calculate the maximum left and top boundaries
-    const maxLeft = window.innerWidth * 0.17; // Subtracting 400 to keep a margin of 200px from both sides
-    const maxTop = window.innerHeight * 0.09; // Subtracting 800 to keep a margin of 200px from both top and bottom
+    // Function to generate random coordinates
+    function generateRandomCoordinates(count) {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-    // Loop through six iterations
-    for (let i = 0; i < 6; i++) {
-        // Get the balloon element based on the current iteration index
-        // The balloon elements are stored in an array: [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon, pinkBalloon]
-        const balloon = [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon, pinkBalloon][i];
+        var coordinates = [];
 
-        // Set the left position of the balloon element to a random value within the maximum left boundary
-        balloon.style.left = Math.random() * maxLeft + '%'; // Adding 200 to maintain the left margin
+        for (var i = 0; i < count; i++) {
+            var balloonWidth = 120; // Width of the balloons
+            var balloonHeight = 150; // Height of the balloons
 
-        // Set the top position of the balloon element to a random value within the maximum top boundary
-        balloon.style.top = Math.random() * maxTop + '%'; // Adding 200 to maintain the top margin
+            var randomX = Math.floor(Math.random() * (screenWidth - balloonWidth));
+            var randomY = Math.floor(Math.random() * (screenHeight - balloonHeight));
+            coordinates.push([randomX, randomY]);
+        }
+
+        return coordinates;
     }
+
+    // Generate random coordinates for 6 balloons
+    var balloonCoordinates = generateRandomCoordinates(6);
+
+    // Apply the random coordinates to the balloons
+    for (var i = 0; i < 6; i++) {
+        var balloon = [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon, pinkBalloon][i];
+        var coordinates = balloonCoordinates[i];
+
+        balloon.style.left = coordinates[0] + 'px';
+        balloon.style.top = coordinates[1] + 'px';
+    }
+
+
 
     count++; // Increment the count of balloon movements
 
-    if (count == 20) {
+    if (count == 22) {
         clearInterval(timer);
         alert('Game Over!');
         redBalloon.style.visibility = 'hidden';
