@@ -70,8 +70,8 @@ function moveBalloon() {
         // Set the left position of the balloon element to a random value within the maximum left boundary
         balloon.style.left = Math.random() * maxLeft + 'px';
 
-        // Set the top position of the balloon element to a random value within 0 to 400 pixels from the top
-        balloon.style.top = Math.random() * 400 + 'px';
+        // Set the top position of the balloon element to a random value within 0 to 600 pixels from the top
+        balloon.style.top = Math.random() * 600 + 'px';
     }
 
     count++; // Increment the count of balloon movements
