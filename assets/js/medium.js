@@ -49,20 +49,24 @@ function moveBalloon() {
     greenBalloon.style.visibility = 'visible';
     redHeartBalloon.style.visibility = 'visible';
 
-    // Reset the balloon sizes and positions
-    redBalloon.style.height = '30%';
-    blueBalloon.style.height = '30%';
-    yellowBalloon.style.height = '30%';
-    greenBalloon.style.height = '30%';
-    redHeartBalloon.style.height = '30%';
 
     // Get the screen width
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
+    // Calculate the balloon size based on the screen width
+    var balloonSize = Math.min(screenWidth * 0.3, 200); // Set the maximum size to 200px or 30% of the screen width, whichever is smaller
+
+    // Reset the balloon sizes and positions
+    redBalloon.style.height = balloonSize + 'px';
+    blueBalloon.style.height = balloonSize + 'px';
+    yellowBalloon.style.height = balloonSize + 'px';
+    greenBalloon.style.height = balloonSize + 'px';
+    redHeartBalloon.style.height = balloonSize + 'px';
+
     // Set the maximum left position based on the screen width
     var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
 
-    // Loop through four iterations
+    // Loop through five iterations
     for (let i = 0; i < 5; i++) {
         // Get the balloon element based on the current iteration index
         // The balloon elements are stored in an array: [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon]
@@ -91,10 +95,3 @@ function moveBalloon() {
     }
 }
 let timer = setInterval(moveBalloon, 600);
-
-
-
-// Select the start game button element from the DOM
-//const startButton = document.getElementById('start-button');
-// Add click event to the start game button
-//startButton.addEventListener('click', startGame);
