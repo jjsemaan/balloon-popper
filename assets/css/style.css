@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
-/*Styling the balloon*/
 /* Styling the balloon */
 #blue-balloon,
 #red-balloon,
@@ -20,6 +19,20 @@
     -o-transition: all 0.25s;
     /* Vendor prefix for Opera */
     visibility: hidden;
+    height: 0;
+}
+
+@media screen and (min-width: 600px) {
+    /* Styling the balloon */
+    #blue-balloon,
+    #red-balloon,
+    #yellow-balloon,
+    #green-balloon,
+    #red-heart-balloon,
+    #purple-balloon,
+    #pink-balloon {
+        height: 0;
+    }
 }
 
 h1 {
