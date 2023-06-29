@@ -6,7 +6,7 @@ let count = 0;
 let scoreLabel = document.getElementById('score-label');
 
 //display the initial score as 0
-scoreLabel.textContent = 'Score: ' + score;
+scoreLabel.innerHTML = '&nbsp;&nbsp;&nbsp;Score: ' + score;  // Add three spaces before "Score: "
 
 // Select the balloon elements and the score box element from the DOM
 const redBalloon = document.getElementById('red-balloon');
@@ -37,7 +37,8 @@ function poppedBalloon() {
     }
 
     // Update the score label with the new score
-    scoreLabel.innerHTML = 'Score: ' + score;
+    scoreLabel.innerHTML = '&nbsp;&nbsp;&nbsp;Score: ' + score;
+
 
     // Set the height of all balloons to 1px
     blueBalloon.style.height = '1px';
@@ -53,10 +54,6 @@ function moveBalloon() {
     
     // Get the screen width
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    // Calculate the balloon size based on the screen width
-    //var maxBalloonSize = Math.min(screenWidth * 0.3, 200); // Set the maximum size to 200px or 30% of the screen width, whichever is smaller
-    //var balloonSize = Math.min(maxBalloonSize, 150); // Limit the maximum balloon size to 150px
 
     // Reset the balloon sizes and positions
     if (window.innerWidth <= 768) {
@@ -77,7 +74,6 @@ function moveBalloon() {
         pinkBalloon.style.height = 250 + 'px';
     }
 
-
     // Show the balloons
     redBalloon.style.visibility = 'visible';
     blueBalloon.style.visibility = 'visible';
@@ -85,9 +81,6 @@ function moveBalloon() {
     greenBalloon.style.visibility = 'visible';
     redHeartBalloon.style.visibility = 'visible';
     pinkBalloon.style.visibility = 'visible';
-
-    // Set the maximum left position based on the screen width
-    //var maxLeft = screenWidth - 200; // Subtract the balloon width (200px) to prevent it from going outside the screen
 
     // Function to generate random coordinates
     function generateRandomCoordinates(count) {
@@ -124,7 +117,7 @@ function moveBalloon() {
 
     count++; // Increment the count of balloon movements
 
-    if (count == 22) {
+    if (count == 32) {
         clearInterval(timer);
         alert('Game Over!');
         redBalloon.style.visibility = 'hidden';
