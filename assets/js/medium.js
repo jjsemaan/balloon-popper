@@ -6,7 +6,12 @@ let count = 0;
 let scoreLabel = document.getElementById('score-label');
 
 //display the initial score as 0
-scoreLabel.innerHTML = '&nbsp;&nbsp;&nbsp;Score: ' + score;  // Add three spaces before "Score: "
+scoreLabel.innerHTML = '&nbsp;&nbsp;&nbsp;Score: ' + score; // Add three spaces before "Score: "
+
+// Retrieve the audio element
+const popSound = document.getElementById('pop-sound');
+const popBubbles = document.getElementById('pop-bubbles');
+const popNegative = document.getElementById('pop-negative');
 
 // Select the balloon elements and the score box element from the DOM
 const redBalloon = document.getElementById('red-balloon');
@@ -30,10 +35,13 @@ function poppedBalloon() {
     // Check if `this` is equal to `redBalloon`
     if (this === redBalloon) {
         score--; // Decrement score by 1
+        popNegative.play(); // Play the pop sound
     } else if (this === redHeartBalloon) {
         score += 2; // Increment score by 2 if `this` is equal to `redHeartBalloon`
+        popBubbles.play(); // Play the pop sound
     } else {
         score++; // Increment score by 1 for other balloons
+        popSound.play(); // Play the pop sound
     }
 
     // Update the score label with the new score
