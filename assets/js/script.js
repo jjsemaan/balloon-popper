@@ -1,4 +1,4 @@
-// Execute the when the DOM loads
+// Execute when the DOM loads
 document.addEventListener('DOMContentLoaded', function () {
     // Retrieve the nickname from localStorage
     var nickname = localStorage.getItem('nickname');
@@ -15,17 +15,24 @@ document.getElementById('game-form').addEventListener('submit', function (event)
 
     // Retrieve the nickname from the input field
     var nickname = document.getElementById('nickname').value;
+
+    // Check if the nickname contains spaces
+    if (nickname.includes(' ')) {
+        alert('Nickname should not contain spaces!');
+        return; // Stop further execution
+    }
+
     // Store the nickname in localStorage
     localStorage.setItem('nickname', nickname);
 
     // Retrieve the selected difficulty level from the dropdown menu
     var level = document.getElementById('level').value;
 
-    // Data Structure to map difficulty level
+    // Data Structure to map difficulty level to corresponding HTML file
     var levelToHtml = new Map([
-        ['easy', 'easy.html'], //Map easy level to easy.html
-        ['medium', 'medium.html'], //Map medium level to medium.html
-        ['hard', 'hard.html'] //Map hard level to hard.html
+        ['easy', 'easy.html'],
+        ['medium', 'medium.html'],
+        ['hard', 'hard.html']
     ]);
 
     // Retrieve the HTML file based on the selected difficulty level

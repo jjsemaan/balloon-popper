@@ -166,7 +166,7 @@ button[type="submit"]:hover {
 }
 
 .footer p {
-    color: #333;
+    color: rgb(0, 0, 0);
     font-size: 14px;
 }
 
@@ -193,9 +193,5 @@ button[type="submit"]:hover {
     
         button[type="submit"] {
             padding: 8px 25px;
-        }
-    
-        button[type="submit"]:hover {
-            background-color: #45a049;
         }
 }
