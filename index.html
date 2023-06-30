@@ -11,78 +11,80 @@
 </head>
 
 <body id="body-index">
+
+
     <main>
-        <div>
-            <section aria-label="welcome note and game instructions">
-                <!--welcome note and game instructions-->
-                <div class="instructions">
-                    <h1>Welcome to Balloon Popper!</h1>
-                    <p>This exciting game features three challenging levels: Easy, Medium, and Hard. Your
-                        objective is to pop balloons by clicking on them and earn points. However, be careful not to
-                        click on
-                        the red balloons,
-                        as they will deduct points from your score.
+        <section aria-label="welcome note and game instructions">
+            <!--welcome note and game instructions-->
+            <div class="instructions">
+                <h1>Welcome to Balloon Popper!</h1>
+                <p>This exciting game features three challenging levels: Easy, Medium, and Hard. Your
+                    objective is to pop balloons by clicking on them and earn points. However, be careful not to
+                    click on
+                    the red balloons,
+                    as they will deduct points from your score.
 
-                        In the Easy level, blue and red balloons will randomly appear on the screen. Each time you
-                        successfully
-                        pop a balloon
-                        (excluding red balloons), your score will increase by 1. If your final score is greater than 6
-                        out of
-                        10, you will
-                        advance to the next level. Otherwise, it's "Game Over!"
+                    In the Easy level, blue and red balloons will randomly appear on the screen. Each time you
+                    successfully
+                    pop a balloon
+                    (excluding red balloons), your score will increase by 1. If your final score is greater than 6
+                    out of
+                    10, you will
+                    advance to the next level. Otherwise, it's "Game Over!"
 
-                        The Medium level introduces three types of balloons: blue, yellow, and red. Your goal remains
-                        the
-                        same—popping blue or
-                        yellow balloons earns you 1 point, while popping a red balloon deducts 1 point. To progress to
-                        the Hard
-                        level, you must
-                        achieve a minimum score of 6 out of 10. Falling short will result in "Game Over!"
+                    The Medium level introduces three types of balloons: blue, yellow, and red. Your goal remains
+                    the
+                    same—popping blue or
+                    yellow balloons earns you 1 point, while popping a red balloon deducts 1 point. To progress to
+                    the Hard
+                    level, you must
+                    achieve a minimum score of 6 out of 10. Falling short will result in "Game Over!"
 
-                        The Hard level is the ultimate challenge. Here, four balloons—blue, green, yellow, and red—will
-                        appear
-                        randomly. Popping
-                        a blue, green, or yellow balloon will increase your score by 1 point, while clicking on a red
-                        balloon
-                        will deduct 1
-                        point. To emerge victorious and complete the game, you must score at least 6 out of 10.
-                        Otherwise, it's
-                        "Game Over!"
+                    The Hard level is the ultimate challenge. Here, four balloons—blue, green, yellow, and red—will
+                    appear
+                    randomly. Popping
+                    a blue, green, or yellow balloon will increase your score by 1 point, while clicking on a red
+                    balloon
+                    will deduct 1
+                    point. To emerge victorious and complete the game, you must score at least 6 out of 10.
+                    Otherwise, it's
+                    "Game Over!"
 
-                        Good luck and have fun playing "Balloon Popper"!</p>
-                </div>
-            </section>
-            <nav>
-                <div class="form-container">
-                    <form id="game-form" action="game.html">
-                        <input type="text" id="nickname" aria-label="enter nickname" placeholder="Enter Your Nickname"
-                            required>
-                    </form>
-                    <form id="game-form" action="game.html">
-                        <select id="level" name="level">
-                            <option value="easy">Difficulty Easy</option>
-                            <option value="medium">Difficulty Medium</option>
-                            <option value="hard">Difficulty Hard</option>
-                        </select>
-                    </form>
-                    <form id="game-button" action="game.html">
-                        <select id="sound" name="sound">
-                            <option value=true>Sound Off</option>
-                            <option value="false">Sound On</option>
-                        </select>
-                        <button type="submit" id="start-button" aria-label="start game">Start Game</button>
-                    </form>
-                </div>
-            </nav>
-
-            <div class="footer">
-                <p>&copy; Balloon Popper 2023 | <a href="https://parabim.com" target="_blank" rel="noopener"
-                        aria-label="visit ParaBIM Ltd. website (opens up in new tab)"><strong>ParaBIM Ltd.</strong></a>
-                </p>
+                    Good luck and have fun playing "Balloon Popper"!</p>
             </div>
-        </div>
-        <script src="assets/js/script.js"></script>
+        </section>
+        <nav>
+            <div class="form-container">
+                <form id="game-form" action="game.html">
+                    <input type="text" id="nickname" aria-label="enter nickname" placeholder="Enter Your Nickname"
+                        required>
+                </form>
+                <form id="game-form" action="game.html">
+                    <select id="level" name="level">
+                        <option value="easy">Difficulty Easy</option>
+                        <option value="medium">Difficulty Medium</option>
+                        <option value="hard">Difficulty Hard</option>
+                    </select>
+                </form>
+                <form id="game-button" action="game.html">
+                    <select id="sound" name="sound">
+                        <option value=true>Sound Off</option>
+                        <option value="false">Sound On</option>
+                    </select>
+                    <button type="submit" id="start-button" aria-label="start game">Start Game</button>
+                </form>
+            </div>
+        </nav>
     </main>
+    <div id="footer">
+        <p>&copy; Balloon Popper 2023 | <a href="https://parabim.com" target="_blank" rel="noopener"
+                aria-label="visit ParaBIM Ltd. website (opens up in new tab)"><strong>ParaBIM Ltd.</strong></a>
+        </p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+
 </body>
 
 </html>
