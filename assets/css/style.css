@@ -23,19 +23,6 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 600px) {
-    /* Styling the balloon */
-    #blue-balloon,
-    #red-balloon,
-    #yellow-balloon,
-    #green-balloon,
-    #red-heart-balloon,
-    #purple-balloon,
-    #pink-balloon {
-        height: 0;
-    }
-}
-
 h1 {
     font-family: 'Carter One', cursive;
     font-size: 400;
@@ -109,7 +96,7 @@ h1 {
     align-items: center;
 }
 
-.form-levels {
+.form-levels, .form-sound {
     font-family: 'Carter One', cursive;
     font-size: 400;
 }
@@ -174,7 +161,21 @@ button[type="submit"]:hover {
     font-size: 14px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (min-width: 600px) {
+
+    /* Styling the balloon */
+    #blue-balloon,
+    #red-balloon,
+    #yellow-balloon,
+    #green-balloon,
+    #red-heart-balloon,
+    #purple-balloon,
+    #pink-balloon {
+        height: 0;
+    }
+}
+
+@media screen and (max-width: 670px) {
     .form {
         flex-direction: column;
     }

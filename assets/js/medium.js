@@ -121,8 +121,6 @@ function moveBalloon() {
         balloon.style.top = coordinates[1] + 'px';
     }
 
-
-
     count++; // Increment the count of balloon movements
 
     if (count == 32) {
