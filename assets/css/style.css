@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Mono:wght@300;500&display=swap');
 
 /* Styling the balloon */
 #blue-balloon,
@@ -40,11 +39,10 @@ h1 {
     font-size: 400;
 }
 
+
+
 #body-index {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-height: 100vh;
+    max-height: 100%;
     font-family: Arial, sans-serif;
     margin-top: 0;
     background-image: url('../images/balloon-arch.png');
@@ -66,13 +64,14 @@ h1 {
     overflow: hidden;
 }
 
-.container {
+/*.container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* Align items at the top */
-}
+    /* Align items at the top 
+}*/
 
 .container-game {
     display: flex;
@@ -87,7 +86,11 @@ h1 {
     background-color: rgb(237, 181, 49);
     padding: 20px;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin: 20px 25px;
+    
+    display: flex;
+    justify-content: center;
+    
     /* Add margin-bottom to create space between form and footer */
 }
 
@@ -98,7 +101,7 @@ h1 {
 }
 
 .form-levels, .form-sound {
-    font-family: 'Carter One', sans-serif;
+    font-family: 'Carter One', cursive;
     font-size: 400;
 }
 
@@ -136,7 +139,7 @@ button[type="submit"]:hover {
 }
 .instructions {
     display: block;
-    margin: 20% 25% 0 25%;
+    padding: 20% 25% 0 25%;
     text-align: center;
 }
 
@@ -144,29 +147,19 @@ button[type="submit"]:hover {
     display: none;
 }
 
-/* footer - copyright footer */
-.footer-copyright {
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
+.footer {
+    position: relative;
+    height: 30px;
+    background-color: #a4a4a4;
+    
     width: 100%;
-    bottom: 0;
+    
     margin-top: auto;
 }
 
-#footer-copyright p {
-    font-size: 14px;
-    text-align: center;
+.footer p {
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-}
-
-#footer-copyright a {
-    color: #1A1A1A;
+    font-size: 14px;
 }
 
 @media screen and (min-width: 600px) {
