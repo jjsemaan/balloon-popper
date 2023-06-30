@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Add event listener to the form submission
-document.getElementById('game-form').addEventListener('submit', function (event) {
+document.getElementById('game-button').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
 
     // Retrieve the nickname from the input field
