@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (nickname) {
         // Display the nickname on the page
         var nicknameElement = document.getElementById('nickname-display');
-        nicknameElement.textContent = 'Player Nickname: ' + nickname + ' !';
+        nicknameElement.textContent = nickname + ' !';
     }
 });
 

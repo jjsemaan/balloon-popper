@@ -66,14 +66,20 @@ h1 {
     overflow: hidden;
 }
 
-.container-game {
+/* Top display in nickname and score easy, medium and hard games*/
+.display-container {
+    background-color: rgb(234, 237, 49);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px 10%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
 }
+
+
 
 .form-container {
     background-color: rgb(234, 237, 49);
@@ -93,7 +99,7 @@ form {
 }
 
 .form-levels, .form-sound {
-    font-family: 'Carter One', cursive;
+    font-family: 'Carter One', sans-serif;
     font-size: 400;
 }
 
@@ -130,7 +136,7 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
 }
 .instructions {
-    padding: 20% 25% 0 25%;
+    padding: 15% 25% 0 25%;
     text-align: center;
 }
 
