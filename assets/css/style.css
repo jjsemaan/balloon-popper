@@ -87,7 +87,7 @@ h1 {
     background-color: rgb(237, 181, 49);
     padding: 20px;
     border-radius: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     /* Add margin-bottom to create space between form and footer */
 }
 
@@ -158,7 +158,7 @@ button[type="submit"]:hover {
 }
 
 #footer-copyright p {
-    font-size: 75%;
+    font-size: 14px;
     text-align: center;
     color: rgb(0, 0, 0);
     font-family: 'Montserrat', sans-serif;
