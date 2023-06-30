@@ -55,8 +55,8 @@
             <nav>
                 <div class="form-container">
                     <form class="form" id="game-form" action="game.html">
-                        <input type="text" id="nickname" placeholder="Enter Your Nickname" required>
-                        <label for="level">Difficulty Level:</label>
+                        <input type="text" id="nickname"  aria-label="enter nickname" placeholder="Enter Your Nickname" required>
+                        <label for="level"  aria-label="select difficulty level">Difficulty Level:</label>
                         <select id="level" name="level">
                             <option value="easy">Easy</option>
                             <option value="medium">Medium</option>
@@ -67,14 +67,16 @@
                             <option value=true>Off</option>
                             <option value="false">On</option>
                         </select>
-                        <button type="submit" id="start-button">Start Game</button>
+                        <button type="submit" id="start-button" aria-label="start game">Start Game</button>
                     </form>
                 </div>
             </nav>
         </div>
 
-        <div class="footer">
-            <p>© 2023 Your Game Name. All rights reserved.</p>
+        <div id="footer-copyright">
+            <p>&copy; Balloon Popper 2023 | <a href="https://parabim.com" target="_blank" rel="noopener"
+                    aria-label="visit ParaBIM Ltd. website (opens up in new tab)"><strong>ParaBIM Ltd.</strong></a>
+            </p>
         </div>
         <script src="assets/js/script.js"></script>
     </main>

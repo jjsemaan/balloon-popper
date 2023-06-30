@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Mono:wght@300;500&display=swap');
 
 /* Styling the balloon */
 #blue-balloon,
@@ -97,7 +98,7 @@ h1 {
 }
 
 .form-levels, .form-sound {
-    font-family: 'Carter One', cursive;
+    font-family: 'Carter One', sans-serif;
     font-size: 400;
 }
 
@@ -143,9 +144,9 @@ button[type="submit"]:hover {
     display: none;
 }
 
-.footer {
-    height: 30px;
-    background-color: #a4a4a4;
+/* footer - copyright footer */
+.footer-copyright {
+    height: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,9 +157,16 @@ button[type="submit"]:hover {
     margin-top: auto;
 }
 
-.footer p {
+#footer-copyright p {
+    font-size: 75%;
+    text-align: center;
     color: rgb(0, 0, 0);
-    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+#footer-copyright a {
+    color: #1A1A1A;
 }
 
 @media screen and (min-width: 600px) {
