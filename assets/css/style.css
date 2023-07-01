@@ -86,7 +86,7 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    margin: 5px 30%;
+    margin: 5px 10%;
 }
 
 form {
@@ -136,7 +136,7 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
 }
 .instructions {
-    padding: 10% 25% 0 25%;
+    padding: 10% 10% 0 10%;
     text-align: center;
 }
 
@@ -178,6 +178,14 @@ button[type="submit"]:hover {
     #purple-balloon,
     #pink-balloon {
         height: 0;
+    }
+
+    .form-container {
+        margin: 5px 25%;
+    }
+
+    .instructions {
+        padding: 10% 25% 0 25%;
     }
 }
 
