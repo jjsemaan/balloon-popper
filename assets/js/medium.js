@@ -32,13 +32,8 @@ pinkBalloon.addEventListener('click', poppedBalloon);
 
 // Modal element
 const modal = document.getElementById('game-over-modal');
-const closeBtn = modal.querySelector('.close');
 const playAgainBtn = document.getElementById('play-again-btn');
 const homeBtn = document.getElementById('home-btn');
-
-closeBtn.addEventListener('click', function () {
-    modal.style.display = 'none';
-});
 
 playAgainBtn.addEventListener('click', function () {
     location.reload(); // Refresh the page
@@ -153,7 +148,7 @@ function moveBalloon() {
 
     count++; // Increment the count of balloon movements
 
-    if (count == 32) {
+    if (count == 2) {
         clearInterval(timer);
         modal.style.visibility = 'visible'; // Display the modal
         redBalloon.style.visibility = 'hidden';
