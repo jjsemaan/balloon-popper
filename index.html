@@ -45,11 +45,11 @@
                         <option value="hard">Difficulty Hard</option>
                     </select>
 
-                    <select id="sound" name="sound">
-                        <option value=true>Sound Off</option>
-                        <option value="false">Sound On</option>
+                    <select id="soundDropdown" name="sound">
+                        <option value="false">Sound Off</option>
+                        <option value="true">Sound On</option>
                     </select>
-                    <button type="submit" id="start-button" aria-label="start game">Start Game</button>
+                    <button onclick="saveSoundOption()" type="submit" id="start-button" aria-label="start game">Start Game</button>
                 </form>
             </div>
         </nav>
@@ -61,6 +61,7 @@
     </div>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/medium.js"></script>
 
 
 </body>

@@ -43,17 +43,27 @@ homeBtn.addEventListener('click', function () {
     window.location.href = 'index.html'; // Redirect to the home page
 });
 
+// Retrieve the sound option from localStorage
+let soundOption = localStorage.getItem('sound');
+
+
 function poppedBalloon() {
     // Check if `this` is equal to `redBalloon`
     if (this === redBalloon) {
         score--; // Decrement score by 1
-        popNegative.play(); // Play the pop sound
+        if (soundOption === "true") {
+            popNegative.play(); // Play the pop sound
+        }
     } else if (this === redHeartBalloon) {
         score += 2; // Increment score by 2 if `this` is equal to `redHeartBalloon`
-        popBubbles.play(); // Play the pop sound
+        if (soundOption === "true") {
+            popBubbles.play(); // Play the pop sound
+        }
     } else {
         score++; // Increment score by 1 for other balloons
-        popSound.play(); // Play the pop sound
+        if (soundOption === "true") {
+            popSound.play(); // Play the pop sound
+        }
     }
 
     // Update the score label with the new score
@@ -148,7 +158,7 @@ function moveBalloon() {
 
     count++; // Increment the count of balloon movements
 
-    if (count == 2) {
+    if (count == 10) {
         clearInterval(timer);
         modal.style.visibility = 'visible'; // Display the modal
         redBalloon.style.visibility = 'hidden';
