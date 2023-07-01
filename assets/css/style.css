@@ -136,8 +136,14 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
 }
 .instructions {
-    padding: 15% 25% 0 25%;
+    padding: 10% 25% 0 25%;
     text-align: center;
+}
+
+.blackout {
+    background-color: rgba(237, 237, 237, 0.7); /* 0.5 opacity */
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .hidden {
