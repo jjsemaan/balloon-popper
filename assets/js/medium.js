@@ -30,6 +30,23 @@ greenBalloon.addEventListener('click', poppedBalloon);
 redHeartBalloon.addEventListener('click', poppedBalloon);
 pinkBalloon.addEventListener('click', poppedBalloon);
 
+// Modal element
+const modal = document.getElementById('game-over-modal');
+const closeBtn = modal.querySelector('.close');
+const playAgainBtn = document.getElementById('play-again-btn');
+const homeBtn = document.getElementById('home-btn');
+
+closeBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+
+playAgainBtn.addEventListener('click', function () {
+    location.reload(); // Refresh the page
+});
+
+homeBtn.addEventListener('click', function () {
+    window.location.href = 'index.html'; // Redirect to the home page
+});
 
 function poppedBalloon() {
     // Check if `this` is equal to `redBalloon`
@@ -47,7 +64,6 @@ function poppedBalloon() {
     // Update the score label with the new score
     scoreLabel.innerHTML = '&nbsp;&nbsp;&nbsp;Score: ' + score;
 
-
     // Set the height of all balloons to 1px
     blueBalloon.style.height = '1px';
     greenBalloon.style.height = '1px';
@@ -55,13 +71,14 @@ function poppedBalloon() {
     redBalloon.style.height = '1px';
     redHeartBalloon.style.height = '1px';
     pinkBalloon.style.height = '1px';
-    
 }
 
 function moveBalloon() {
-    
     // Get the screen width
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var screenWidth =
+        window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
 
     // Reset the balloon sizes and positions
     if (window.innerWidth <= 768) {
@@ -92,8 +109,14 @@ function moveBalloon() {
 
     // Function to generate random coordinates
     function generateRandomCoordinates(count) {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        var screenWidth =
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth;
+        var screenHeight =
+            window.innerHeight ||
+            document.documentElement.clientHeight ||
+            document.body.clientHeight;
 
         var coordinates = [];
 
@@ -114,7 +137,14 @@ function moveBalloon() {
 
     // Apply the random coordinates to the balloons
     for (var i = 0; i < 6; i++) {
-        var balloon = [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon, pinkBalloon][i];
+        var balloon = [
+            redBalloon,
+            blueBalloon,
+            yellowBalloon,
+            greenBalloon,
+            redHeartBalloon,
+            pinkBalloon,
+        ][i];
         var coordinates = balloonCoordinates[i];
 
         balloon.style.left = coordinates[0] + 'px';
@@ -125,7 +155,7 @@ function moveBalloon() {
 
     if (count == 32) {
         clearInterval(timer);
-        alert('Game Over!');
+        modal.style.visibility = 'visible'; // Display the modal
         redBalloon.style.visibility = 'hidden';
         blueBalloon.style.visibility = 'hidden';
         yellowBalloon.style.visibility = 'hidden';
@@ -133,7 +163,7 @@ function moveBalloon() {
         redHeartBalloon.style.visibility = 'hidden';
         pinkBalloon.style.visibility = 'hidden';
 
-        return; // Terminate the code execution after displaying the alert
+        return; // Terminate the code execution after displaying the modal
     }
 }
 
