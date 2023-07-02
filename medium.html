@@ -11,34 +11,38 @@
 </head>
 
 <body id="body-game">
-    <img id="red-balloon" src="assets/images/balloon-red.png" alt="red balloon">
-    <img id="red-heart-balloon" src="assets/images/balloon-heart-red.png" alt="red heart balloon">
-    <img id="blue-balloon" src="assets/images/balloon-blue.png" alt="blue balloon">
-    <img id="yellow-balloon" src="assets/images/balloon-yellow.png" alt="yellow balloon">
-    <img id="green-balloon" src="assets/images/balloon-green.png" alt="green-balloon">
-    <img id="pink-balloon" src="assets/images/balloon-pink.png" alt="pink-balloon">
-    
-        <div class="display-container">
-            <form class="form-levels" id="game-form" action="game.html">
-                <label><span id="nickname-display"></span></label>
-                <label id="score-label"></label>
-            </form>
-        </div>
-        <div id="game-over-modal" class="modal">
-            <div class="modal-content">
-                
-                <p>Game Over!</p>
-                <button id="play-again-btn">Play again!</button>
-                <button id="home-btn">Home</button>
+    <main>
+        <!--ballon images source http: //www.clipartbest.com/free-balloon-png-art-->
+        <img id="red-balloon" src="assets/images/balloon-red.png" alt="red balloon">
+        <img id="red-heart-balloon" src="assets/images/balloon-heart-red.png" alt="red heart balloon">
+        <img id="blue-balloon" src="assets/images/balloon-blue.png" alt="blue balloon">
+        <img id="yellow-balloon" src="assets/images/balloon-yellow.png" alt="yellow balloon">
+        <img id="green-balloon" src="assets/images/balloon-green.png" alt="green-balloon">
+        <img id="pink-balloon" src="assets/images/balloon-pink.png" alt="pink-balloon">
+        <section>
+            <!--View form displaying player nickname and score-->
+            <div class="display-container">
+                <form class="form-levels" id="game-form" action="game.html">
+                    <label aria-label="Player nickname"><span id="nickname-display"></span></label>
+                    <label id="score-label" aria-label="Player score"></label>
+                </form>
             </div>
-        </div>
-    
-    <!--All audio source https://pixabay.com-->
-    <audio id="pop-sound" src="assets/audio/balloon-pop.mp3"></audio>
-    <audio id="pop-bubbles" src="assets/audio/pop-bubbles.mp3"></audio>
-    <audio id="pop-negative" src="assets/audio/negative_beeps.mp3"></audio>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/medium.js"></script>
+            <div id="game-over-modal" class="modal">
+                <div class="modal-content">
+                    <p>Game Over!</p>
+                    <button id="play-again-btn" aria-label="Replay game">Play again!</button>
+                    <button id="home-btn" aria-label="Home button">Home</button>
+                </div>
+            </div>
+        </section>
+        <!--All audio source https://pixabay.com-->
+        <audio id="pop-sound" src="assets/audio/balloon-pop.mp3" aria-label="Balloon pop sound"></audio>
+        <audio id="pop-bubbles" src="assets/audio/pop-bubbles.mp3" aria-label="Bubbles sound"></audio>
+        <audio id="pop-negative" src="assets/audio/negative_beeps.mp3" aria-label="Error sound"></audio>
+        <!--Link to javascript-->
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/medium.js"></script>
+    </main>
 </body>
 
 </html>
