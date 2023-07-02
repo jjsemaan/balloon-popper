@@ -20,6 +20,7 @@ const yellowBalloon = document.getElementById('yellow-balloon');
 const greenBalloon = document.getElementById('green-balloon');
 const redHeartBalloon = document.getElementById('red-heart-balloon');
 const pinkBalloon = document.getElementById('pink-balloon');
+const purpleBalloon = document.getElementById('purple-balloon');
 const scoreBox = document.getElementById('score-box');
 
 // Click events of the balloons
@@ -29,6 +30,7 @@ yellowBalloon.addEventListener('click', poppedBalloon);
 greenBalloon.addEventListener('click', poppedBalloon);
 redHeartBalloon.addEventListener('click', poppedBalloon);
 pinkBalloon.addEventListener('click', poppedBalloon);
+purpleBalloon.addEventListener('click', poppedBalloon);
 
 // Modal element
 const modal = document.getElementById('game-over-modal');
@@ -76,6 +78,7 @@ function poppedBalloon() {
     redBalloon.style.height = '1px';
     redHeartBalloon.style.height = '1px';
     pinkBalloon.style.height = '1px';
+    purpleBalloon.style.height = '1px';
 }
 
 function moveBalloon() {
@@ -94,14 +97,16 @@ function moveBalloon() {
         greenBalloon.style.height = 150 + 'px';
         redHeartBalloon.style.height = 150 * 1.5 + 'px';
         pinkBalloon.style.height = 150 + 'px';
+        purpleBalloon.style.height = 150 + 'px';
     } else {
         // Larger screen sizes
         redBalloon.style.height = 250 + 'px';
         blueBalloon.style.height = 250 + 'px';
-        yellowBalloon.style.height = 200 + 'px';
+        yellowBalloon.style.height = 250 + 'px';
         greenBalloon.style.height = 250 + 'px';
         redHeartBalloon.style.height = 250 * 1.5 + 'px';
         pinkBalloon.style.height = 250 + 'px';
+        purpleBalloon.style.height = 250 + 'px';
     }
 
     // Show the balloons
@@ -111,6 +116,7 @@ function moveBalloon() {
     greenBalloon.style.visibility = 'visible';
     redHeartBalloon.style.visibility = 'visible';
     pinkBalloon.style.visibility = 'visible';
+    purpleBalloon.style.visibility = 'visible';
 
     // Function to generate random coordinates
     function generateRandomCoordinates(count) {
@@ -137,28 +143,22 @@ function moveBalloon() {
         return coordinates;
     }
 
-    // Generate random coordinates for 6 balloons
-    let balloonCoordinates = generateRandomCoordinates(6);
+    // Generate random coordinates for all 7 balloons
+    let balloonCoordinates = generateRandomCoordinates(7);
 
-    // Apply the random coordinates to the balloons
-    for (let i = 0; i < 6; i++) {
-        let balloon = [
-            redBalloon,
-            blueBalloon,
-            yellowBalloon,
-            greenBalloon,
-            redHeartBalloon,
-            pinkBalloon,
-        ][i];
-        let coordinates = balloonCoordinates[i];
+    // Create an array of balloon elements
+    let balloons = [redBalloon, blueBalloon, yellowBalloon, greenBalloon, redHeartBalloon, pinkBalloon, purpleBalloon];
 
-        balloon.style.left = coordinates[0] + 'px';
-        balloon.style.top = coordinates[1] + 'px';
+    // Apply the random coordinates to the balloons using a loop
+    for (let i = 0; i < balloons.length; i++) {
+        balloons[i].style.left = balloonCoordinates[i][0] + 'px';
+        balloons[i].style.top = balloonCoordinates[i][1] + 'px';
     }
 
     count++; // Increment the count of balloon movements
 
-    if (count == 10) {
+
+    if (count == 32) {
         clearInterval(timer);
         modal.style.visibility = 'visible'; // Display the modal
         redBalloon.style.visibility = 'hidden';
@@ -167,9 +167,10 @@ function moveBalloon() {
         greenBalloon.style.visibility = 'hidden';
         redHeartBalloon.style.visibility = 'hidden';
         pinkBalloon.style.visibility = 'hidden';
+        purpleBalloon.style.visibility = 'hidden';
 
         return; // Terminate the code execution after displaying the modal
     }
 }
 
-let timer = setInterval(moveBalloon, 1000);
+let timer = setInterval(moveBalloon, 1200);

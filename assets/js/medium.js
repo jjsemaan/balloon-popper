@@ -98,7 +98,7 @@ function moveBalloon() {
         // Larger screen sizes
         redBalloon.style.height = 250 + 'px';
         blueBalloon.style.height = 250 + 'px';
-        yellowBalloon.style.height = 200 + 'px';
+        yellowBalloon.style.height = 250 + 'px';
         greenBalloon.style.height = 250 + 'px';
         redHeartBalloon.style.height = 250 * 1.5 + 'px';
         pinkBalloon.style.height = 250 + 'px';
@@ -158,7 +158,7 @@ function moveBalloon() {
 
     count++; // Increment the count of balloon movements
 
-    if (count == 10) {
+    if (count == 32) {
         clearInterval(timer);
         modal.style.visibility = 'visible'; // Display the modal
         redBalloon.style.visibility = 'hidden';
