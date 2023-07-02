@@ -158,7 +158,7 @@ function moveBalloon() {
     count++; // Increment the count of balloon movements
 
 
-    if (count == 32) {
+    if (count == 62) {
         clearInterval(timer);
         modal.style.visibility = 'visible'; // Display the modal
         redBalloon.style.visibility = 'hidden';
@@ -173,4 +173,4 @@ function moveBalloon() {
     }
 }
 
-let timer = setInterval(moveBalloon, 800);
+let timer = setInterval(moveBalloon, 600);
