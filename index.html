@@ -11,8 +11,6 @@
 </head>
 
 <body id="body-index">
-
-
     <main>
         <section aria-label="welcome note and game instructions">
             <!--welcome note and game instructions-->
@@ -33,26 +31,29 @@
                 </p>
             </div>
         </section>
-        <nav>
+        <section aria-label="Input player nickname, select difficulty and navigate to game.">
             <div class="form-container">
                 <form id="game-form" action="game.html">
                     <input type="text" id="nickname" aria-label="enter nickname" placeholder="Enter Your Nickname"
                         required>
 
-                    <select id="level" name="level">
+                    <select id="level" name="level" aria-label="Select difficulty level">
                         <option value="easy">Difficulty Easy</option>
                         <option value="medium">Difficulty Medium</option>
                         <option value="hard">Difficulty Hard</option>
                     </select>
 
-                    <select id="soundDropdown" name="sound">
+                    <select id="soundDropdown" name="sound" aria-label="Play sound">
                         <option value="false">Sound Off</option>
                         <option value="true">Sound On</option>
                     </select>
-                    <button onclick="saveSoundOption()" type="submit" id="start-button" aria-label="start game">Start Game</button>
+                    <nav>
+                        <button onclick="saveSoundOption()" type="submit" id="start-button"
+                            aria-label="click to start game">Start Game</button>
+                    </nav>
                 </form>
             </div>
-        </nav>
+        </section>
     </main>
     <div id="footer">
         <p>&copy; Balloon Popper 2023 | <a href="https://parabim.com" target="_blank" rel="noopener"
