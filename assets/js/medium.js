@@ -80,7 +80,7 @@ function poppedBalloon() {
 
 function moveBalloon() {
     // Get the screen width
-    var screenWidth =
+    let screenWidth =
         window.innerWidth ||
         document.documentElement.clientWidth ||
         document.body.clientWidth;
@@ -114,23 +114,23 @@ function moveBalloon() {
 
     // Function to generate random coordinates
     function generateRandomCoordinates(count) {
-        var screenWidth =
+        let screenWidth =
             window.innerWidth ||
             document.documentElement.clientWidth ||
             document.body.clientWidth;
-        var screenHeight =
+        let screenHeight =
             window.innerHeight ||
             document.documentElement.clientHeight ||
             document.body.clientHeight;
 
-        var coordinates = [];
+        let coordinates = [];
 
-        for (var i = 0; i < count; i++) {
-            var balloonWidth = 120; // Width of the balloons
-            var balloonHeight = 150; // Height of the balloons
+        for (let i = 0; i < count; i++) {
+            let balloonWidth = 120; // Width of the balloons
+            let balloonHeight = 150; // Height of the balloons
 
-            var randomX = Math.floor(Math.random() * (screenWidth - balloonWidth));
-            var randomY = Math.floor(Math.random() * (screenHeight - balloonHeight));
+            let randomX = Math.floor(Math.random() * (screenWidth - balloonWidth));
+            let randomY = Math.floor(Math.random() * (screenHeight - balloonHeight));
             coordinates.push([randomX, randomY]);
         }
 
@@ -138,11 +138,11 @@ function moveBalloon() {
     }
 
     // Generate random coordinates for 6 balloons
-    var balloonCoordinates = generateRandomCoordinates(6);
+    let balloonCoordinates = generateRandomCoordinates(6);
 
     // Apply the random coordinates to the balloons
-    for (var i = 0; i < 6; i++) {
-        var balloon = [
+    for (let i = 0; i < 6; i++) {
+        let balloon = [
             redBalloon,
             blueBalloon,
             yellowBalloon,
@@ -150,7 +150,7 @@ function moveBalloon() {
             redHeartBalloon,
             pinkBalloon,
         ][i];
-        var coordinates = balloonCoordinates[i];
+        let coordinates = balloonCoordinates[i];
 
         balloon.style.left = coordinates[0] + 'px';
         balloon.style.top = coordinates[1] + 'px';
