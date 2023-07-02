@@ -230,7 +230,7 @@ button[type="submit"]:hover {
     opacity: 0.8;
 }
 
-
+/*enable responsive design*/
 @media screen and (min-width: 600px) {
 
     /* Styling the balloon */
