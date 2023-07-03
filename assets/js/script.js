@@ -26,7 +26,7 @@ document.getElementById('game-form').addEventListener('submit', function (event)
 
     // Store the nickname in localStorage
     localStorage.setItem('nickname', nickname);
-    
+
     // Retrieve the selected difficulty level from the dropdown menu
     let level = document.getElementById('level').value;
 
@@ -39,10 +39,10 @@ document.getElementById('game-form').addEventListener('submit', function (event)
 
     // Retrieve the HTML file based on the selected difficulty level
     let htmlFile = levelToHtml.get(level);
-    
+
     // Redirect the page to the corresponding HTML file
     window.location.href = htmlFile;
-    
+
 });
 
 
@@ -59,10 +59,6 @@ function saveSoundOption() {
     localStorage.setItem('sound', soundOption);
 }
 
-
-
-
-
 // Action when the balloon is clicked
 let score = 0;
 let count = 0;
@@ -71,7 +67,7 @@ let count = 0;
 let scoreLabel = document.getElementById('score-label');
 
 //display the initial score as 0
-scoreLabel.innerHTML = score; 
+//scoreLabel.innerHTML = score;
 
 // Retrieve the audio element
 const popSound = document.getElementById('pop-sound');
@@ -219,7 +215,7 @@ function moveBalloon() {
         balloons[i].style.left = balloonCoordinates[i][0] + 'px';
         balloons[i].style.top = balloonCoordinates[i][1] + 'px';
     }
-    
+
     count++; // Increment the count of balloon movements
 
 
@@ -256,11 +252,11 @@ let levelOption = localStorage.getItem('level');
 // Set the timer interval based on the selected difficulty level
 let timerInterval;
 if (levelOption === 'easy') {
-    timerInterval = 1000;
+    timerInterval = 1200;
 } else if (levelOption === 'medium') {
-    timerInterval = 800;
+    timerInterval = 900;
 } else {
-    timerInterval = 600;
+    timerInterval = 700;
 }
 
 // Start the timer with the selected interval
