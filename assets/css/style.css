@@ -218,7 +218,7 @@ button[type="submit"]:hover {
 
 .modal-content button {
     flex: 1;
-    width: 100%;
+    width: 60%;
     font-size: 15px;
     background-color: #1616d7;
     color: white;
@@ -284,6 +284,6 @@ button[type="submit"]:hover {
     }
 
     .modal-content button {
-    font-size: 20px;
+    width: 100%;
     }
 }
