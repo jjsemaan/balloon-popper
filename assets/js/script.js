@@ -219,7 +219,7 @@ function moveBalloon() {
         balloons[i].style.left = balloonCoordinates[i][0] + 'px';
         balloons[i].style.top = balloonCoordinates[i][1] + 'px';
     }
-
+    
     count++; // Increment the count of balloon movements
 
 
@@ -258,19 +258,10 @@ let timerInterval;
 if (levelOption === 'easy') {
     timerInterval = 1000;
 } else if (levelOption === 'medium') {
-    timerInterval = 700;
+    timerInterval = 800;
 } else {
-    timerInterval = 500;
+    timerInterval = 600;
 }
 
 // Start the timer with the selected interval
 let timer = setInterval(moveBalloon, timerInterval);
-
-
-
-
-
-// Start the timer with the new interval
-//timer = setInterval(moveBalloon, timerInterval);
-
-
