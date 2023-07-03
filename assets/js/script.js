@@ -57,3 +57,14 @@ function saveSoundOption() {
     localStorage.setItem('sound', soundOption);
 }
 
+// Function to save the difficulty level
+function saveLevelOption() {
+    // Retrieve the dropdown element
+    const levelDropdown = document.getElementById('level');
+
+    // Get the selected value from the dropdown
+    const levelOption = levelDropdown.value;
+
+    // Save the level option to localStorage
+    localStorage.setItem('level', levelOption);
+}

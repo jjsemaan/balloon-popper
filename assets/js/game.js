@@ -19,7 +19,7 @@ const greenBalloon = document.getElementById('green-balloon');
 const redHeartBalloon = document.getElementById('red-heart-balloon');
 const pinkBalloon = document.getElementById('pink-balloon');
 const purpleBalloon = document.getElementById('purple-balloon');
-//const scoreBox = document.getElementById('score-box');
+const scoreBox = document.getElementById('score-box');
 
 // Click events of the balloons
 redBalloon.addEventListener('click', poppedBalloon);
@@ -173,17 +173,6 @@ function moveBalloon() {
     }
 }
 
-// Function to save the difficulty level
-function saveLevelOption() {
-    // Retrieve the dropdown element
-    const levelDropdown = document.getElementById('level');
-
-    // Get the selected value from the dropdown
-    const levelOption = levelDropdown.value;
-
-    // Save the level option to localStorage
-    localStorage.setItem('level', levelOption);
-}
 
 // Retrieve the level option from localStorage
 let levelOption = localStorage.getItem('level');
