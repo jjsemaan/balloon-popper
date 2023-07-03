@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (nickname) {
         // Display the nickname on the page
         let nicknameElement = document.getElementById('nickname-display');
-        nicknameElement.textContent = nickname + ' !';
+        nicknameElement.textContent = nickname;
     }
 });
 
@@ -71,7 +71,7 @@ let count = 0;
 let scoreLabel = document.getElementById('score-label');
 
 //display the initial score as 0
-scoreLabel.innerHTML = '&nbsp;&nbsp;&nbsp;Score: ' + score; // Add three spaces before "Score: "
+scoreLabel.innerHTML = score; 
 
 // Retrieve the audio element
 const popSound = document.getElementById('pop-sound');
