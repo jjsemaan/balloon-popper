@@ -26,14 +26,12 @@
 
 h1 {
     font-family: 'Carter One', sans-serif;
-    font-size: 400;
     text-align: center;
 }
 
 /* Score display */
 #score-box, #score-label {
     font-family: 'Carter One', sans-serif;
-    font-size: 400;
 }
 
 /* body of index page*/
@@ -104,7 +102,6 @@ form {
 
 .form-levels, .form-sound {
     font-family: 'Carter One', sans-serif;
-    font-size: 400;
 }
 
 label {
