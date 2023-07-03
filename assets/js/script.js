@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let nickname = localStorage.getItem('nickname');
     if (nickname) {
         // Display the nickname on the page
-        let nicknameElement = document.getElementById('nickname-display');
+        let nicknameElement = document.getElementById('nickname');
         nicknameElement.textContent = nickname;
     }
 });
@@ -66,9 +66,6 @@ let count = 0;
 // Retrieve score-label element
 let scoreLabel = document.getElementById('score-label');
 
-//display the initial score as 0
-//scoreLabel.innerHTML = score;
-
 // Retrieve the audio element
 const popSound = document.getElementById('pop-sound');
 const popBubbles = document.getElementById('pop-bubbles');
@@ -109,7 +106,9 @@ homeBtn.addEventListener('click', function () {
 // Retrieve the sound option from localStorage
 let soundOption = localStorage.getItem('sound');
 
-
+/**
+ * respnse when the balloon is clicked to pop it.
+ */
 function poppedBalloon() {
     // Check if `this` is equal to `redBalloon`
     if (this === redBalloon) {
