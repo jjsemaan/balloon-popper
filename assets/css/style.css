@@ -237,6 +237,39 @@ button[type="submit"]:hover {
     opacity: 0.8;
 }
 
+/* 404 related styles */
+.return-home-container {
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+    max-width: 100%;
+}
+
+.return-button {
+    background-color: #00BD78;
+    color: #000000;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+}
+
+.return-button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
 /*enable responsive design*/
 @media screen and (min-width: 600px) {
 
