@@ -11,7 +11,6 @@ const popBubbles = document.getElementById('pop-bubbles');
 const popNegative = document.getElementById('pop-negative');
 
 // Select the balloon elements and the score box element from the DOM
-
 const redBalloon = document.getElementById('red-balloon');
 const blueBalloon = document.getElementById('blue-balloon');
 const yellowBalloon = document.getElementById('yellow-balloon');
@@ -47,7 +46,7 @@ homeBtn.addEventListener('click', function () {
 let soundOption = localStorage.getItem('sound');
 
 /**
- * respnse when the balloon is clicked to pop it.
+ * Respnse when the balloon is clicked to pop it.
  */
 function poppedBalloon() {
     // Check if `this` is equal to `redBalloon`
@@ -81,6 +80,9 @@ function poppedBalloon() {
     purpleBalloon.style.height = '1px';
 }
 
+/**
+ * Get screen width to generate random coordinates
+ */
 function moveBalloon() {
     // Get the screen width
     let screenWidth =
@@ -118,7 +120,9 @@ function moveBalloon() {
     pinkBalloon.style.visibility = 'visible';
     purpleBalloon.style.visibility = 'visible';
 
-    // Function to generate random coordinates
+    /**
+     * Generate random coordinates
+     */
     function generateRandomCoordinates(count) {
         let screenWidth =
             window.innerWidth ||

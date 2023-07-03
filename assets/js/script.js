@@ -1,4 +1,6 @@
-// Execute when the DOM loads
+/**
+ * Execute when the DOM loads
+ */
 document.addEventListener('DOMContentLoaded', function () {
     // Retrieve the nickname from localStorage
     let nickname = localStorage.getItem('nickname');
@@ -11,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Add event listener to the form submission
+/**
+ * Add event listener to the form submission
+ */
 document.getElementById('game-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
 
@@ -45,7 +49,9 @@ document.getElementById('game-form').addEventListener('submit', function (event)
 
 });
 
-// Function to save the sound option to localStorage
+/**
+ * Function to save the sound option to localStorage
+ */
 function saveSoundOption() {
     // Retrieve the dropdown element
     const soundDropdown = document.getElementById('soundDropdown');
@@ -57,7 +63,9 @@ function saveSoundOption() {
     localStorage.setItem('sound', soundOption);
 }
 
-// Function to save the difficulty level
+/**
+ * Function to save the difficulty level
+ */
 function saveLevelOption() {
     // Retrieve the dropdown element
     const levelDropdown = document.getElementById('level');
