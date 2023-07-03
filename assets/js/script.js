@@ -219,7 +219,7 @@ function moveBalloon() {
     count++; // Increment the count of balloon movements
 
 
-    if (count == 32) {
+    if (count == 2) {
         clearInterval(timer);
         modal.style.visibility = 'visible'; // Display the modal
         redBalloon.style.visibility = 'hidden';

@@ -192,14 +192,15 @@ button[type="submit"]:hover {
 .modal-content {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 16px;
     background-color: white;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
     border: 5px solid #888;
     border-radius: 5px;
     width: 300px;
-    max-width: 82%;
+    max-width: 80%;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -217,7 +218,8 @@ button[type="submit"]:hover {
 
 .modal-content button {
     flex: 1;
-    width: 50%;
+    width: 100%;
+    font-size: 15px;
     background-color: #1616d7;
     color: white;
     padding: 10px 20px;
@@ -275,5 +277,13 @@ button[type="submit"]:hover {
 
     .modal-content {
         max-width: 100%;
+    }
+
+    .modal-content {
+        flex-direction: row;
+    }
+
+    .modal-content button {
+    font-size: 20px;
     }
 }
