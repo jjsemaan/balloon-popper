@@ -6,29 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Balloon popper game for kids.">
+    <meta name="keywords"
+        content="kids game, balloon popper game, game coding, html game, css game, javascript game, Dublin, Ireland">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/parabim-favicon.png">
     <title>Balloon Popper Game</title>
 </head>
 
-<body id="body-game">
+<body id="body-index">
     <main>
-        <section aria-label="welcome note and game instructions">
+        <section aria-label="error note page not found">
             <!--welcome note and game instructions-->
             <div class="instructions">
                 <h1 class="blackout">404 Page Not Found!</h1>
-                <br>
-                <div class="return-home-container">
-                    <a href="index.html" class="return-button" aria-label="home page">
+                <p class="blackout"> The page you are looking does not exist.
+                    <br>
+                    Please click below to go back to our home page.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="form-container">
+                <form id="game-form" action="game.html">
+                    <!--start game button-->
+                    <a href="index.html" id="error-home" aria-label="home page">
                         HOME</a>
-                </div>
+                </form>
             </div>
         </section>
     </main>
     <!--footer-->
     <div id="footer">
         <p>&copy; Balloon Popper 2023 | <a href="https://parabim.com" target="_blank" rel="noopener"
-                aria-label="visit ParaBIM Ltd. website (opens up in new tab)"><strong>ParaBIM Ltd.</strong></a>
+                aria-label="visit ParaBIM Ltd. website (opens up in new tab)"><strong>ParaBIM
+                    Ltd.</strong></a>
         </p>
     </div>
 </body>
