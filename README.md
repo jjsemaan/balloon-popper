@@ -140,3 +140,56 @@ PP2 Jalal Semaan
 * HTML and CSS successfully passed W3C validation with no errors using the URI method. Project URI "https://jjsemaan.github.io/balloon-popper/".
 
 ![Modules Page](assets/images/validation.jpg)
+
+* JavaSdript successfully passed JSHint validation with no errors. Note that few warnings about unused variables due to calling functions from html.
+
+![Modules Page](assets/images/js-validation.jpg)
+
+## Bugs
+
+> Saving sound to local storage. **fixed** 
+> <br>
+
+> Mapping html pages by difficulty level. **fixed**
+> <br>
+
+> Constraining balloon randomisation inside screen width and height in different devices. **fixed**
+> <br>
+
+> Balloon randomisation method using array of coordinates. **fixed**
+> <br>
+
+> Footer was not sticking to the bottom of the screen. **fixed**
+
+## Deployment
+
+* To deploy the project the below steps were followed at "https://jjsemaan.github.io/balloon-popper/".
+
+ 1. Access the repository's navigation menu and click on Settings.
+ 2. Navigate to the side bar and choose the Pages menu.
+ 3. From the first dropdown menu labeled Source, select the branch named main.
+ 4. Leave the next dropdown labeled /root with its default option.
+ 5. Finally, click on "Save" to confirm your selection.
+
+## Credits
+
+> Balloon images source "http: //www.clipartbest.com/free-balloon-png-art"
+> <br>
+
+> Game Over modal inspired by "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2"
+> <br>
+
+> General html and css code lookup from W3 Schools "https://www.w3schools.com/"
+> <br>
+
+> Code Institute Love Running Project developed inline with PP1 "https://github.com/jjsemaan/love-running"
+> <br>
+
+> General JavaScrip lookup from Stack Overflow "https://stackoverflow.com/"
+
+## Acknowledgements
+
+
+> Daisy McGirr
+> 
+> My mentor who provided me with constructive feedback and support throughout the duration of this project.
