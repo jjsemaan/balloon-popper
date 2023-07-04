@@ -70,7 +70,7 @@ PP2 Jalal Semaan
 ## Features Left to Implement
 
 
-* Encouragement notifications such as 'Great job! Now try to play the Hard." could be added to the moday.
+* Encouragement notifications such as 'Great job! Now try to play the Hard." could be added to the modal.
 * As the speed of the game is increasing by difficulty level, the number of balloons could be increased.
 * A high scores championship board could be added.
 * More info can be added about the game developers.
@@ -111,7 +111,7 @@ PP2 Jalal Semaan
 |--|--|
 |All pages display correctly on screens larger than 600px| Pass |
 |All pages display correctly on screens lower than 600px| Pass |
-|Minimum screen width of 155px reach with no issues| Pass |
+|Minimum screen width of 155px reached with no issues| Pass |
 
 ### Testing on various devices
 
@@ -141,6 +141,8 @@ PP2 Jalal Semaan
 
 ![Modules Page](assets/images/validation.jpg)
 
+### JavaScript Validation
+
 * JavaSdript successfully passed JSHint validation with no errors. Note that few warnings about unused variables due to calling functions from html.
 
 ![Modules Page](assets/images/js-validation.jpg)
@@ -150,7 +152,10 @@ PP2 Jalal Semaan
 > Saving sound to local storage. **fixed** 
 > <br>
 
-> Mapping html pages by difficulty level. **fixed**
+> Mapping sound to designate balloon. **fixed** 
+> <br>
+
+> Mapping html pages by selected difficulty level. **fixed**
 > <br>
 
 > Constraining balloon randomisation inside screen width and height in different devices. **fixed**
