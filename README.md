@@ -74,7 +74,7 @@ PP2 Jalal Semaan
 * As the speed of the game is increasing by difficulty level, the number of balloons could be increased.
 * A high scores championship board could be added.
 * More info can be added about the game developers.
-* A login feature should be added for frequent players.
+* A login feature could be added for frequent players.
 
 ## Technology
 
@@ -103,5 +103,40 @@ PP2 Jalal Semaan
 |Start Game button leads to corresponding difficulty pages| Pass|
 |Footer link to developers website works | Pass|
 |Popup modal appears at Game Over| Pass|
-|Form Validation presents when incorrect input type is entered | Pass|
+|Form Validation presents nickname is empty or includes spaces | Pass|
 
+### Testing for responsiveness
+
+| Test |Outcome  |
+|--|--|
+|All pages display correctly on screens larger than 600px| Pass |
+|All pages display correctly on screens lower than 600px| Pass |
+|Minimum screen width of 155px reach with no issues| Pass |
+
+### Testing on various devices
+
+|Device Name |Dimensions  |Outcome  |
+|--|--|--|
+|iPhone SE | 375 x 667 | Pass |
+|iPhone XR | 414 x 896 | Pass |
+|iPhone 12 pro | 390 x 844 | Pass |
+|Samsung Galaxy S8+ | 360 x 740 | Pass |
+|Samdung Galaxy S20 Ultra | 412 x 915 | Pass |
+|iPad Air | 820 x 1180 | Pass |
+|iPad Mini | 768 x 1024 | Pass |
+|Surface Pro 7 | 912 x 1368 | Pass |
+|Surface Duo | 540 x 720 | Pass |
+|Galaxy Fold | 280 x 653 | Pass |
+|Samdung Galaxy A51/71 | 412 x 914 | Pass |
+|Nest Hub | 1204 x 600 | Pass |
+|Nest Hub Max | 1280 x 800 | Pass |
+
+### Google Lighthouse Testing
+
+![Home Page](assets/images/lighthouse-testing.jpg)
+
+### HTML and CSS Validation
+
+* HTML and CSS successfully passed W3C validation with no errors using the URI method. Project URI "https://jjsemaan.github.io/balloon-popper/".
+
+![Modules Page](assets/images/validation.jpg)
