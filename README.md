@@ -143,7 +143,7 @@ PP2 Jalal Semaan
 
 ### JavaScript Validation
 
-* JavaSdript successfully passed JSHint validation with no errors. Note that few warnings about unused variables due to calling functions from html.
+* JavaScript successfully passed JSHint validation with no errors. Note that few warnings about unused variables due to calling functions from html.
 
 ![Modules Page](assets/images/js-validation.jpg)
 
