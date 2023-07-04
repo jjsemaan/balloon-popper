@@ -46,7 +46,7 @@ PP2 Jalal Semaan
 * Scoring
   * A score counter is visible on the top menu.
   * Scores '+1', '-1' and '+2' are graphically overlaid on their designate balloons to enable informed decision making the the player. 
-  * See below image of ballons and score counter.
+  * See below image of ballon score points.
 
   ![Balloon Scores](assets/images/balloon-scores.jpg)
 
