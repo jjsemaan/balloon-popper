@@ -61,3 +61,47 @@ PP2 Jalal Semaan
   * The footer remains enabled in the 404 page with a hyperlink to the developers website.
 
 ![404](assets/images/404page.jpg)
+
+## Existing Features
+
+* Website is fully responsive and works of all devices.
+* Gaming is available in three difficulty levels where balloon will change position faster as it gets harder.
+
+## Features Left to Implement
+
+
+* Encouragement notifications such as 'Great job! Now try to play the Hard." could be added to the moday.
+* As the speed of the game is increasing by difficulty level, the number of balloons could be increased.
+* A high scores championship board could be added.
+* More info can be added about the game developers.
+* A login feature should be added for frequent players.
+
+## Technology
+
+> HTML (Hyper Text Markup Language) <br> Used for creating the structure and content of web pages, providing a framework for organising code for a website.
+
+> CSS (Cascading Style Sheets) <br> Commonly used to define the visual appearance and layout of web pages, including colors, fonts, spacing, and positioning.
+  
+> JavaScript <br> A versatile programming language that adds interactivity and dynamic functionality to websites.
+
+> IDE Codeanywhere (Integrated Development Environment) <br> An online IDE that allows developers to code, collaborate, and deploy their projects provided an internet connection.
+
+> Git <br> A version control system that provides both a command-line interface (CLI) and a graphical user interface (GUI) for managing and interacting with repositories.
+> Font Awesome <br> A popular icon library and toolkit that provides a wide range of scalable vector icons that can be easily customised and used in web development projects.
+
+## Testing
+
+* Testing was performed by developer Jalal Semaan on two main browsers Microsoft Edge and Google Chrome.
+
+### Testing for links and Form
+
+| Test |Outcome  |
+|--|--|
+|Nickname input works and appears in top menu of gaming pages| Pass|
+|Difficulty dropdown works as selected| Pass|
+|Sound On / Off dropdown works as selected| Pass|
+|Start Game button leads to corresponding difficulty pages| Pass|
+|Footer link to developers website works | Pass|
+|Popup modal appears at Game Over| Pass|
+|Form Validation presents when incorrect input type is entered | Pass|
+
